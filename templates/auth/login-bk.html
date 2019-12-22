@@ -1,0 +1,29 @@
+{% block header %}
+    <title>出院手术登记</title>
+  <h1>{% block title %}出院手术登记{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <div>
+        <fieldset>
+        <p>
+          <label style="color:red">*</label>
+            <label for="name" style="padding: 3px 6px; text-align:right; width:250px; vertical-align:top;">姓名：</label>
+          <input type="text" id="name" name="name" datatype="s2-10" size="20" maxlength="10" required>
+        </p>
+        <p>
+          <label style="color:red">*</label>
+            <label for="phone" style="padding: 3px 6px; text-align:right; width:550px; vertical-align:top;">手机号码：</label>
+            <input type="number" name="phone" id="phone" datatype="n11" required>
+        </p>
+        <p>
+          <label style="color:red">*</label>
+            <label for="op_date" style="padding: 3px 6px; text-align:right; width:550px; vertical-align:top;">手术时间：</label>
+            <input type="date" id="op_date" name="op_date" required>
+        </p>
+            <br><input type="submit" value="提交">
+        </fieldset>
+    </div>
+  </form>
+{% endblock %}
